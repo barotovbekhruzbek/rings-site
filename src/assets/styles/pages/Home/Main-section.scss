@@ -1,0 +1,9 @@
+@import '../../components/_mixins.scss';
+@import '../../components/_vars.scss';
+
+.main-section{
+    width: 100%;
+    min-height: 100vh;
+    background: url('@/assets/images/layout/main-bg.jpg') no-repeat;
+    background-size: cover;
+}
