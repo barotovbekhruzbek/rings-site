@@ -6,4 +6,26 @@
     min-height: 100vh;
     background: url('@/assets/images/layout/main-bg.jpg') no-repeat;
     background-size: cover;
+  
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: flex-end;
+         min-height: 100vh;
+        text-align: center;
+
+        .content{
+            margin-bottom: 80px;
+            .main-title{
+                font-size: 36px;
+                font-family:'Noto',sans-serif ;
+                color: $white;
+                margin-bottom: 50px;
+
+                @include md{
+                    font-size: 25px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
 }
