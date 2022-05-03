@@ -22,6 +22,8 @@
                  class="card"
                  v-for="item in collection[activeBtn].data"
                  :key="item.product_id"
+                   @click="isOpen = item "
+
                  >
 
 
@@ -31,22 +33,30 @@
             </div>
         </div>
     </section>
+    <HomeModal 
+     :item="isOpen"
+    @action="isOpen = null "
+    v-if="isOpen"
+     />
 </template>
 
 <script>
 import Title from '../../../layouts/Title.vue'
 import Collection from '../../../collaction.js'
+import HomeModal from './HomeModel.vue'
 export default {
         components: {
             Title,
-            Collection
+            Collection,
+            HomeModal
         },
         data() {
             return {
                 activeBtn : 0,
                 subtitle:  'К мероприятиям',
                 title: 'Настоящая красота здесь!',
-                collection: Collection
+                collection: Collection,
+                isOpen:null
             }
         },
 }

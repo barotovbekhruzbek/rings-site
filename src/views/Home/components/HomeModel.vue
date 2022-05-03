@@ -1,12 +1,12 @@
 <template>
         <div class="home-model">
             <div class="modal-card">
-                <img src="" alt="" class="image">
+                <img :src="item.img" alt="" class="image">
                 <div class="content">
-                    <h3 class="title"></h3>
-                    <p class="desc"></p>
+                    <h3 class="title"> {{ item.title }} </h3>
+                    <p class="desc"> {{ item.desc }} </p>
 
-                    <button class="btn">Закрыть</button>
+                    <button class="btn" @click="$emit('action')">Закрыть</button>
                 </div>
             </div>
         </div>
@@ -14,7 +14,12 @@
 </template>
 
 <script>
+import Collection from '../../../collaction.js'
 export default {
+    props: {
+        item: Object
+    },
+
 
 }
 </script>
@@ -48,11 +53,12 @@ export default {
 
             .content{
                 width: 100%;
-                padding: 30PX;
+                padding: 30px;
 
                 .title{
                     font-size: 30px;
                     margin: 15px 0;
+                    text-transform: uppercase;
                 }
 
                 .btn{
@@ -60,6 +66,8 @@ export default {
                     background: $dark;
                     border-radius: 10px;
                     color: $white;
+                    font-weight: 500;
+                    margin-top: 30px;
                 }
             }
 
