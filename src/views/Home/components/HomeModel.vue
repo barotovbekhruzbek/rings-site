@@ -1,6 +1,6 @@
 <template>
-        <div class="home-model">
-            <div class="modal-card">
+        <div class="home-model" @click="$emit('action')">
+            <div class="modal-card" @click.stop>
                 <img :src="item.img" alt="" class="image">
                 <div class="content">
                     <h3 class="title"> {{ item.title }} </h3>
@@ -43,12 +43,26 @@ export default {
         .modal-card{
             background-color:$white;
             width: 40%;
-            height: 80vh;
+           
+        //    Media
+            @include xl {
+                width:70%;
+            }
+
+                  @include md {
+                width:85%;
+            }
+
 
             .image{
                width: 100%;
                height: 400px;
                 object-fit: cover;
+
+                // Media
+                @include sm{
+                    height: 250px;
+                }
             }
 
             .content{
