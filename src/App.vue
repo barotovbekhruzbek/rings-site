@@ -9,7 +9,8 @@
 </template>
 
 
-  <script>
+  <script>    
+   
   import Navbar from './layouts/Navbar.vue'
   import Search from './layouts/Search-bar.vue'
   export default {
@@ -26,6 +27,7 @@
   }
   </script>
 
-<style lang="scss">
+<style lang="scss">    
+ 
 @import './assets/styles/main.scss';
 </style>
