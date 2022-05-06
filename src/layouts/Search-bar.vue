@@ -34,7 +34,7 @@ export default {
         display: flex;
         justify-content: center;
         background: rgba($black, $alpha: 0.9);
-        z-index: 9999;
+        z-index: 100000000;
         transform: translateY(-400px);
         transition: 0.5s;
         &.active{

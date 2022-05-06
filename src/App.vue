@@ -1,11 +1,9 @@
 <template>
-  <Search 
-  :isActive="isSearchbarActive"
-  @closeSearch ="isSearchbarActive = false"
-  />
-  <Navbar @openSearchBar="isSearchbarActive = true" 
-    
-  />
+ <Navbar  @openSearchBar="isSearchActive = true"/>
+  <Search  
+  :isActive="isSearchActive"
+  @closeSearch="isSearchActive = false"/>
+ 
 
 <router-view />
 </template>
@@ -22,7 +20,7 @@
 
     data() {
       return {
-        isSearchbarActive: false,
+        isSearchActive: false,
       }
     },
   }

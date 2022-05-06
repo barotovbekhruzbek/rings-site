@@ -75,7 +75,7 @@ export default {
            menuArray: [
                {
                    text: 'Контрагентам',
-                   link : '3'
+                   link : '/'
                },
 
 

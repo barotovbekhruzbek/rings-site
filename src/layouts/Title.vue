@@ -29,6 +29,8 @@ export default {
         .site-title{
             width: 100%;
             text-align: center;
+            position: relative;
+            z-index: 99;
 
             .subtitle{
                 font-size: 21px;
