@@ -45,6 +45,7 @@ export default {
         padding: 100px 0;
         text-align: center;
         color: $white;
+        background-size: cover;
         // Media
         padding: 50px 0;
         .text{

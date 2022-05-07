@@ -6,17 +6,19 @@
  
 
 <router-view />
+  <Footor />
 </template>
 
 
   <script>    
-   
+  import Footor from './layouts/Footor.vue'   
   import Navbar from './layouts/Navbar.vue'
   import Search from './layouts/Search-bar.vue'
   export default {
     components: {
       Navbar,
-      Search
+      Search,
+      Footor
     },
 
     data() {
